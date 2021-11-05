@@ -6,15 +6,14 @@ namespace Ticket_avulso
 {
     class TicketsAvulso
     {
-        public List<long> IdCartao = new List<long> ();
-        public List<long> IdCliente = new List<long> ();
+        public List<long> IdCartao = new List<long>();
+        public List<long> IdCliente = new List<long>();
         List<long> Soma = new List<long>();
         List<long> Resto = new List<long>();
-        List<long> Peso = new List<long> {2,3,4,5,6,7,8,9,2,3 };
+        List<long> Peso = new List<long> { 2, 3, 4, 5, 6, 7, 8, 9, 2, 3 };
         List<long> resultado = new List<long>();
         long SomaCalc02 = 0;
 
-        
 
         public void Calc01()
         {
@@ -24,7 +23,7 @@ namespace Ticket_avulso
             }
             IdCliente.Insert(0, IdCliente[2]);
             IdCliente.Insert(1, IdCliente[4]);
-            for(int i =0; i<= 9; i++)
+            for (int i = 0; i <= 9; i++)
             {
                 long soma01 = IdCartao[i];
                 long soma02 = IdCliente[i];
@@ -51,7 +50,7 @@ namespace Ticket_avulso
             Resto.Reverse();
             for (int i = 0; i <= 9; i++)
             {
-                
+
                 long soma01 = Resto[i];
                 long soma02 = Peso[i];
                 SomaCalc02 += (soma01 * soma02);
@@ -75,8 +74,8 @@ namespace Ticket_avulso
                 Console.Write(itens);
             }
 
-            /*Console.WriteLine("\n---------------------------------\n");
-            foreach (int iten in Resto)
+            Console.WriteLine("\n---------------------------------\n");
+            /*foreach (int iten in Resto)
             {
                 Console.Write(iten);
             }
